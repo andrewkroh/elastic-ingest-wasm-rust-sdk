@@ -24,3 +24,8 @@ crate-type = ["cdylib", "lib"]
 name = "decode_msgpack"
 path = "examples/decode_msgpack.rs"
 crate-type = ["cdylib"]
+
+[[example]]
+name = "modify_fields"
+path = "examples/modify_fields.rs"
+crate-type = ["cdylib"]
