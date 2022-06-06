@@ -34,7 +34,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "elastic-ingest"
+name = "elastic_ingest"
 version = "0.1.0"
 dependencies = [
  "chrono",

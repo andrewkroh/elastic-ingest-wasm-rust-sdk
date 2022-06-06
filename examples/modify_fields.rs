@@ -28,4 +28,3 @@ pub extern "C" fn process() -> Status {
     put_field("null", "null").unwrap();
     return Status::Ok;
 }
-

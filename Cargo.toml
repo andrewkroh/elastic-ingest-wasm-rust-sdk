@@ -1,5 +1,5 @@
 [package]
-name = "elastic-ingest"
+name = "elastic_ingest"
 version = "0.1.0"
 authors = ["Andrew Kroh <andrew.kroh@elastic.co>"]
 edition = "2018"
@@ -23,6 +23,11 @@ crate-type = ["cdylib", "lib"]
 [[example]]
 name = "decode_msgpack"
 path = "examples/decode_msgpack.rs"
+crate-type = ["cdylib"]
+
+[[example]]
+name = "demo"
+path = "examples/demo.rs"
 crate-type = ["cdylib"]
 
 [[example]]

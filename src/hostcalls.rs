@@ -19,6 +19,7 @@ use crate::types::*;
 use std::ptr::null_mut;
 use std::time::{Duration, SystemTime, UNIX_EPOCH};
 
+#[cfg(target_family = "wasm")]
 #[link(wasm_import_module = "elastic")]
 extern "C" {
     fn elastic_get_field(
@@ -60,6 +61,7 @@ pub fn get_field(field: &str) -> Result<Option<String>, Status> {
     }
 }
 
+#[cfg(target_family = "wasm")]
 #[link(wasm_import_module = "elastic")]
 extern "C" {
     fn elastic_put_field(
@@ -79,6 +81,7 @@ pub fn put_field(key: &str, value: &str) -> Result<(), Status> {
     }
 }
 
+#[cfg(target_family = "wasm")]
 #[link(wasm_import_module = "elastic")]
 extern "C" {
     fn elastic_log(level: i32, message_data: *const u8, message_size: usize) -> Status;
@@ -93,6 +96,7 @@ pub fn log(level: LogLevel, message: &str) {
     }
 }
 
+#[cfg(target_family = "wasm")]
 #[link(wasm_import_module = "elastic")]
 extern "C" {
     fn elastic_get_current_time_nanoseconds(return_time: *mut u64) -> Status;
